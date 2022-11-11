@@ -12,7 +12,7 @@ const Addbook = () => {
     e.preventDefault();
     const book = { name, image, description, price, datepublished, genre };
 
-    fetch('http://localhost:3002/books', {
+    fetch('http://127.0.0.1:9292/books', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(book)

@@ -8,10 +8,10 @@ const CollectionCard = ({image, handleDelete}) => {
   return (
 <div className='py-10'>
       <div className=" max-w-sm rounded overflow-hidden shadow-2xl hover:scale-105 duration-300 h-[890px] cursor-pointer">
-        <img src={image.image} alt="" className=" float-left w-full h-[500px]" />
+        <img src={image.image_url} alt="" className=" float-left w-full h-[500px]" />
         <div className="px-6 py-10">
           <div className="font-bold text-black-500 text-3xl text-center mb-2 underline-offset-auto">
-            Title: {image.name}
+            Title: {image.title}
           </div>
           <ul>
             <li className='flex'>
@@ -20,12 +20,12 @@ const CollectionCard = ({image, handleDelete}) => {
               <button onClick={() => setReadMore(!readMore)}>{readMore?"show less":"read more"}</button>
             </li>
             <li>
-              <strong>Date Published: </strong>
-              {image.datepublished}
+              <strong>Year Published: </strong>
+              {image.year_published}
             </li>
             <li>
               <strong>Genre: </strong>
-              {image.category}
+              {image.genre}
             </li>
             <li className="px=6 py-4 text-3xl">
               <strong>Price: </strong>

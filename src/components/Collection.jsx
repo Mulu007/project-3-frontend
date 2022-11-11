@@ -11,7 +11,7 @@ const Collection = () => {
   },[])
 
   function getImages() {
-   fetch(`http://localhost:3002/books`)
+   fetch(`http://127.0.0.1:9292/books`)
     .then((response) => response.json())
     .then((data) =>
         setImages(data)
@@ -19,7 +19,7 @@ const Collection = () => {
   }
 
   function handleDelete(id) {
-    fetch(`http://localhost:3002/books/${id}`, {
+    fetch(`http://127.0.0.1:9292/books/${id}`, {
       method: "DELETE",
     })
     .then((response) => response.json())
