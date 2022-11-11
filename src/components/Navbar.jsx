@@ -19,8 +19,8 @@ const Navbar = () => {
             </ul>
         </div>
         <div className='hidden md:flex pr-4'>
-            <button className='border-none bg-transparent text-black mr-4 '>Add Book</button>
-            <button className='px-8 py-3'>Sign Up</button>
+            {/* <button className='border-none bg-transparent text-black mr-4 '>Add Book</button> */}
+            {/* <button className='px-8 py-3'>Sign Up</button> */}
         </div>
         <div className='md:hidden' onClick={handleClick}>
             {!nav ? <AiOutlineMenu className='text-3xl'/> : <AiOutlineClose className='text-3xl'/>}
@@ -33,8 +33,8 @@ const Navbar = () => {
           <li><Link className='border-b-2 border-zinc-300 w-full' to="about" smooth={true} offset={-200} duration={500}>About</Link></li>
           <li><Link className='border-b-2 border-zinc-300 w-full' to="collection" smooth={true} offset={-50} duration={500}>Collection</Link></li>
         <div className='flex flex-col my-4'>
-            <button className='bg-transparent text-cyan-600 px-8 py-3 mb-4'>Add Book</button>
-            <button className='px-8 py-3'>Sign Up</button>
+            {/* <button className='bg-transparent text-cyan-600 px-8 py-3 mb-4'>Add Book</button> */}
+            {/* <button className='px-8 py-3'>Sign Up</button> */}
         </div>
       </ul>
     </div>

@@ -7,35 +7,26 @@ const Collection = () => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:9292/books`)
-      .then((response) => response.json())
-      .then((data) =>
-        {
-          setImages(data);
-        }
-      );
-  }, []);
+    getImages();
+  },[])
 
-  // function deleteBook(id) {
-  //   fetch(`http://localhost:3000/books/${id}`, {
-  //     method: "DELETE",
-  //   })
-  //   .then((response) => response.json())
-  //   .then(() => {
-  //     setImages();
-  //   })
-  // }
+  function getImages() {
+   fetch(`http://localhost:3002/books`)
+    .then((response) => response.json())
+    .then((data) =>
+        setImages(data)
+    );
+  }
 
-  const handleDelete = (id) => {
-    fetch(`http://localhost:9292/books/${id}`, {
+  function handleDelete(id) {
+    fetch(`http://localhost:3002/books/${id}`, {
       method: "DELETE",
     })
     .then((response) => response.json())
     .then(() => {
-      setImages()
+      getImages();
     })
   }
-
 
   return (
     <div name="collection" className="bg-zinc-200">

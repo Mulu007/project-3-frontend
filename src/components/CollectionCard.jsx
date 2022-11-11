@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-const CollectionCard = ({image}) => {
+const CollectionCard = ({image, handleDelete}) => {
   const [readMore, setReadMore] = useState(false)
   
 
@@ -32,7 +32,7 @@ const CollectionCard = ({image}) => {
               {"$" + image.price}
             </li>
           </ul>
-          <button className='bg-red-500' >DELETE</button>
+          <button className=' w-full my-5 py-2 rounded-lg' onClick={() => handleDelete(image.id)}>DELETE</button>
         </div>
       </div>
     </div>
