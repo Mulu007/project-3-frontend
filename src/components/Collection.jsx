@@ -7,7 +7,7 @@ const Collection = () => {
   const [images, setImages] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:3002/books`)
+    fetch(`http://localhost:9292/books`)
       .then((response) => response.json())
       .then((data) =>
         {
@@ -27,7 +27,7 @@ const Collection = () => {
   // }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3000/books/${id}`, {
+    fetch(`http://localhost:9292/books/${id}`, {
       method: "DELETE",
     })
     .then((response) => response.json())
