@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import {useNavigate} from "react-router-dom"
 
 const Addbook = () => {
   const [name, setName] = useState("");
@@ -8,7 +7,6 @@ const Addbook = () => {
   const [price, setPrice] = useState('');
   const [datepublished, setDatePublished] = useState('');
   const [genre, setGenre] = useState('');
-  const navigation = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,8 +18,6 @@ const Addbook = () => {
       body: JSON.stringify(book)
     }).then(() => {
       console.log('new book added');
-      //   history.got
-      navigation.push("/home");
     });
   }
 
