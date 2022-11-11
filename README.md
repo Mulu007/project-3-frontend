@@ -27,6 +27,26 @@ App for crowd sourcing books for book enthusiasts. Users can even add books for 
 * Tailwind
 * React
 
+
+## Website Peek
+
+### Home Page
+
+![Website Screenshot](https://github.com/Mulu007/project-3-frontend/blob/main/src/assests/website%20screenshots/Home.png?raw=true)
+### About Page
+
+![Website Screenshot](https://github.com/Mulu007/project-3-frontend/blob/main/src/assests/website%20screenshots/About.png?raw=true)
+### Collections Page
+
+![Website Screenshot](https://github.com/Mulu007/project-3-frontend/blob/main/src/assests/website%20screenshots/Collection.png?raw=true)
+### Adding a Book Page
+
+![Website Screenshot](https://github.com/Mulu007/project-3-frontend/blob/main/src/assests/website%20screenshots/Newbook.png?raw=true)
+
+## LIVE SITE
+
+https://project-3-frontend.vercel.app
+
 ## License
 
 Copyright (c)2022 Bilal Ibrahim, Lewis Munyambu & Silvanius.B.Mulu
