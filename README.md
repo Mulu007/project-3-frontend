@@ -2,9 +2,9 @@
 React & Ruby Project - Phase 3 Project
 
 # Team
+* Silvanius Mulu
 * Bilal Ibrahim
 * Lewis Munyambu
-* Silvanius Mulu
 
 # Team norms
 * Standups (9:15am, 2:15pm, 5:00pm)
