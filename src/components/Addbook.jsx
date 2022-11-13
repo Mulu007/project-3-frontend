@@ -12,7 +12,7 @@ const Addbook = () => {
     e.preventDefault();
     const book = { name, image, description, price, datepublished, genre };
 
-    fetch('http://127.0.0.1:9292/books', {
+    fetch('https://sheltered-crag-19830.herokuapp.com/books', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(book)

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import {AiOutlineSearch} from "react-icons/ai"
 
 import CollectionCard from './CollectionCard'
 
@@ -11,7 +10,7 @@ const Collection = () => {
   },[])
 
   function getImages() {
-   fetch(`http://127.0.0.1:9292/books`)
+   fetch(`https://sheltered-crag-19830.herokuapp.com/books`)
     .then((response) => response.json())
     .then((data) =>
         setImages(data)
@@ -19,7 +18,7 @@ const Collection = () => {
   }
 
   function handleDelete(id) {
-    fetch(`http://127.0.0.1:9292/books/${id}`, {
+    fetch(`https://sheltered-crag-19830.herokuapp.com/books/${id}`, {
       method: "DELETE",
     })
     .then((response) => response.json())
