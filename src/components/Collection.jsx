@@ -34,7 +34,7 @@ const Collection = () => {
       </div>
       <div className="container-mx-auto ">
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 pt-4">
           {images.map((image) => (
             <CollectionCard key={image.id} image={image} handleDelete={handleDelete}/>
           ))}
