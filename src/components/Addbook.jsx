@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
 const Addbook = () => {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState('');
+  const [title, setTitle] = useState("");
+  const [image_url, setImage_Url] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
-  const [datepublished, setDatePublished] = useState('');
+  const [year_published, setYear_Published] = useState('');
   const [genre, setGenre] = useState('');
 
   function handleSubmit(e) {
     e.preventDefault();
-    const book = { name, image, description, price, datepublished, genre };
+    const book = { title, image_url, description, price, year_published, genre };
 
     fetch('https://sheltered-crag-19830.herokuapp.com/books', {
       method: 'POST',
@@ -29,11 +29,11 @@ const Addbook = () => {
         <form className="max-w-[600px] w-full mx-auto bg-gray-900 p-8 px-8 rounded-lg" onSubmit={handleSubmit}>
             <div className="flex flex-col text-gray-400 py-2">
                 <label>Book Name:</label>
-                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text"  required  value={name} onChange={(e) => setName(e.target.value)}/>
+                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none"  required  value={title} onChange={(e) => setTitle(e.target.value)}/>
             </div >
             <div className="flex flex-col text-gray-400 py-2">
                 <label>Book Image:</label>
-                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text"  required  value={image} onChange={(e) => setImage(e.target.value)}/>
+                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none"   required  value={image_url} onChange={(e) => setImage_Url(e.target.value)}/>
             </div>
             <div className="flex flex-col text-gray-400 py-2">
                 <label>Book Description:</label>
@@ -44,8 +44,8 @@ const Addbook = () => {
                 <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text"  required  value={price} onChange={(e) => setPrice(e.target.value)}/>
             </div>
             <div className="flex flex-col text-gray-400 py-2">
-                <label>Book Date Published:</label>
-                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="text"  required  value={datepublished} onChange={(e) => setDatePublished(e.target.value)}/>
+                <label>Book Year Published:</label>
+                <input className="rounded-lg bg-gray-700 mt-2 p-2 focus:border-blue-500 focus:bg-gray-800 focus:outline-none" type="number"  required  value={year_published} onChange={(e) => setYear_Published(e.target.value)}/>
             </div>
             <div className="flex flex-col text-gray-400 py-2">
                 <label>Book Genre:</label>
